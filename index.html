@@ -84,9 +84,9 @@
       <label for="subject">Select Subject</label>
       <select id="subject" onchange="showYears()">
         <option value="">--Select Subject--</option>
-        <option value="OOPs">oops</option>
-        <option value="DSA">dsa</option>
-        <option value="Mathematics">maths</option>
+        <option value="maths">Mathematics</option>
+        <option value="oops">OOPs</option>
+        <option value="dsa">DSA</option>
       </select>
     </div>
 
@@ -131,7 +131,7 @@
     function downloadFile() {
       const branch = document.getElementById("branch").value;
       const exam = document.getElementById("exam").value;
-      const subject = document.getElementById("subject").value;
+      const subject = document.getElementById("subject").value.toLowerCase();
       const year = document.getElementById("year").value;
 
       if (!branch || !exam || !subject || !year) {
@@ -139,9 +139,8 @@
         return;
       }
 
-      const filename = `${subject}-${year}.pdf`.toLowerCase()
-      const baseUrl = 'https://kunal639.github.io/pyq-proj/'
-      const fileUrl = baseUrl + filename
+      const filename = ${subject}-${year}.pdf;
+      const fileUrl  = 'https://kunal639.github.io/pyq-proj/'
 
       const link = document.createElement('a');
       link.href = fileUrl;
