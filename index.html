@@ -84,9 +84,9 @@
       <label for="subject">Select Subject</label>
       <select id="subject" onchange="showYears()">
         <option value="">--Select Subject--</option>
-        <option value="OOPs">OOPs</option>
-        <option value="DSA">DSA</option>
-        <option value="Mathematics">Mathematics</option>
+        <option value="OOPs">oops</option>
+        <option value="DSA">dsa</option>
+        <option value="Mathematics">maths</option>
       </select>
     </div>
 
@@ -139,7 +139,7 @@
         return;
       }
 
-      const filename = `${subject}-${year}.pdf`
+      const filename = `${subject}-${year}.pdf`.toLowerCase()
       const baseUrl = 'https://kunal639.github.io/pyq-proj/'
       const fileUrl = baseUrl + filename
 
